@@ -28,5 +28,5 @@
     right: -7px;
     bottom: -7px;
     border-radius: 50%;
-    border: 2px solid #E97120;
+    border: 2px solid var(--borderColor);
   }

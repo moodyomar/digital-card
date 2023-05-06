@@ -4,29 +4,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Changa', sans-serif;
 }
 
 :root {
   --bgc: #2E2E2E;
   --color: #ffff;
-  --bgHero: url('cover.jpeg');;
-  --bgProfile: url('logo.png');
-  --profileBorder: linear-gradient(180deg, #E78C21 0%, #E9711F 100%);
+  --bgHero: url('https://qbmedia.b-cdn.net/qbmedia/card-cover.jpeg');
+  --bgProfile: url('logo.svg');
+  --borderColor: #E97120;
+  --gradient: linear-gradient(90deg, #E68E21 0.02%, #E96F1E 100.02%);
+  --font:'Changa', sans-serif;
 }
-.App{
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-background-color: var(--bgc);
-color: var(--color);
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bgc);
+  color: var(--color);
+  font-family: var(--font);
 }
+
 .btn {
   height: 46px;
   width: 204px;
   border-radius: 5px;
-  background: linear-gradient(90deg, #E68E21 0.02%, #E96F1E 100.02%);
+  background: var(--gradient);
   border-radius: 5px;
   display: flex;
   gap: 5px;
@@ -36,11 +40,16 @@ color: var(--color);
   color: var(--bgc);
   font-weight: 500;
 }
-h1{
+
+h1 {
   font-size: 35px;
   font-weight: 500;
 }
-p{
+
+p {
   font-size: 20px;
   font-weight: 300;
+}
+.Footer a{
+  color: var(--borderColor);
 }
