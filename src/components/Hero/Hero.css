@@ -1,0 +1,32 @@
+.cover{
+    position: relative;
+    width: 95vw;
+    height: 250px;
+    top: 10px;
+    background-image: var(--bgHero);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.profile{
+    position: absolute;
+    width: 163px;
+    height: 163px;
+    border-radius: 50%;
+    top: 140px;
+    background-image: var(--bgProfile);
+    background-size: contain;
+}
+.profile::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    right: -7px;
+    bottom: -7px;
+    border-radius: 50%;
+    border: 2px solid #E97120;
+  }

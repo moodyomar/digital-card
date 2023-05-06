@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Changa', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --bgc: #2E2E2E;
+  --color: #ffff;
+  --bgHero: url('cover.jpeg');;
+  --bgProfile: url('logo.png');
+  --profileBorder: linear-gradient(180deg, #E78C21 0%, #E9711F 100%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: var(--bgc);
+color: var(--color);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn {
+  height: 46px;
+  width: 204px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #E68E21 0.02%, #E96F1E 100.02%);
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
+  gap: 5px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 28px;
+  color: var(--bgc);
+  font-weight: 500;
 }
-
-.App-link {
-  color: #61dafb;
+h1{
+  font-size: 35px;
+  font-weight: 500;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p{
+  font-size: 20px;
+  font-weight: 300;
 }

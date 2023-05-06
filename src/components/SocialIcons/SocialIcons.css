@@ -1,0 +1,18 @@
+.SocialIcons{
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 34px;
+    width: 100vw;
+    direction: rtl;
+    width: 80vw;
+}
+.socialIcon{
+display: flex;
+flex-direction: column;
+}
+span{
+    margin-top: 10px;
+    font-size: 13px;
+}
