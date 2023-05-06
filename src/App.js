@@ -1,7 +1,8 @@
+import React from 'react';
 import './App.css';
 import Hero from './components/Hero/Hero';
 import SocialIcons from './components/SocialIcons/SocialIcons';
-import addIcon from './add-icon.svg'
+import SaveContactBtn from './components/SaveContactBtn/SaveContactBtn';
 
 
 function App() {
@@ -11,9 +12,9 @@ function App() {
       <h1 style={{ marginTop: '75px' }}>QB Media | كيوبي ميديا</h1>
       <p>تطوير مصالح تجاريه لعالم الديجيتال</p>
       <SocialIcons />
-      <div className="btn">ضيفني لجهات الاتصال <img src={addIcon} alt="Add QB Media Contact" /></div>
+      <SaveContactBtn/>
       <div className='Footer' style={footerStyle}>
-        <small>برمجه وتصميم <a href="https://qbmedia.co.il" target="_blank" rel="noreferrer" style={footerStyle.a}>كيوبي ميديا</a></small>
+        <small>برمجه وتصميم <a href="https://qbmedia.co.il" target="_blank" rel="noopener noreferrer" style={footerStyle.a}>كيوبي ميديا</a></small>
       </div>
     </div>
   );
