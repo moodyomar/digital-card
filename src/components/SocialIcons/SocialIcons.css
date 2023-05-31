@@ -9,10 +9,19 @@
     width: 80vw;
 }
 .socialIcon{
+    cursor: pointer;
+    transition: .25s all ease-out;
 display: flex;
 flex-direction: column;
+}
+.socialIcon:hover{
+    transition: .3s all ease-in;
+    transform: scale(1.1);
 }
 span{
     margin-top: 10px;
     font-size: 13px;
+}
+.heading-actions{
+    display: none !important;
 }
