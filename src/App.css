@@ -40,7 +40,16 @@
   color: var(--bgc);
   font-weight: 500;
 }
-
+.svc-btn{
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.svc-btn:hover{
+  background: var(--gradient);
+  color: #fff;
+  border: 0px solid #fff;
+}
 h1 {
   font-size: 35px;
   font-weight: 500;
