@@ -12,7 +12,6 @@ function App() {
       <Hero />
       <SocialIcons />
       <SaveContactBtn/>
-      <div onClick={() => window.open('https://qbmedia.co.il/form')}  className="btn svc-btn" >أطلب خدمه الأن</div>
       <Footer />
     </div>
   );

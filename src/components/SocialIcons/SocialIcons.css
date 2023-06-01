@@ -30,11 +30,13 @@ span{
     position: fixed;
     top: 50%;
     left: 50%;
-    /* height: 300px; */
     transform: translate(-50%, -50%);
     background-color: white;
+    color: #2E2E2E;
     padding: 20px;
     width: 400px;
+    height: 525px;
+    overflow-y: scroll;
     max-width: 90%;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

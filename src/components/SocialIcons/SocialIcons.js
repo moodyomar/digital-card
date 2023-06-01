@@ -51,8 +51,6 @@ const SocialIcons = () => {
                 window.open('https://qbmedia.co.il')
                 break;
             case "calendar":
-                // window.open('https://calendly.com/qbmedia/bizmeet')
-                // window.open('https://app.acuityscheduling.com/schedule.php?owner=29370045')
                 openCalendarModal();
                 break;
             default:
@@ -70,7 +68,7 @@ const SocialIcons = () => {
             ))}
             <Modal isOpen={isCalendarModalOpen} onRequestClose={closeCalendarModal} className="modal" overlayClassName="overlay">
                 <div className="modal-content">
-                    <h2>عين الان موعد اونلاين</h2>
+                    <h2>تعيين موعد اونلاين</h2>
                     {/* <Calendar /> */}
                     <iframe src="https://qbmedia.setmore.com/" title="Schedule Appointment" scrolling="yes" width="100%" height="500" frameborder="0"></iframe>
                     {/* <button className="close-button" onClick={closeCalendarModal}>X</button> */}
