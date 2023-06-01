@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import askSvc from './ask-svc.svg'
 import Hero from './components/Hero/Hero';
 import SocialIcons from './components/SocialIcons/SocialIcons';
 import SaveContactBtn from './components/SaveContactBtn/SaveContactBtn';

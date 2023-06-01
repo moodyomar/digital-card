@@ -8,7 +8,7 @@ import mail from './mail-icon.svg'
 import website from './web-icon.svg'
 import calendar from './calendar-icon.svg'
 import Modal from 'react-modal';
-// import Calendar from '../Calendar/Calendar';
+// import Calendar from '../Calendar/Calendar'
 
 
 const icons = [
@@ -59,7 +59,7 @@ const SocialIcons = () => {
                 console.log("Invalid action");
         }
     };
-
+    
     return (
         <div className="SocialIcons">
             {icons.map((icon) => (
@@ -70,11 +70,9 @@ const SocialIcons = () => {
             ))}
             <Modal isOpen={isCalendarModalOpen} onRequestClose={closeCalendarModal} className="modal" overlayClassName="overlay">
                 <div className="modal-content">
-                    {/* <Calendar /> */}
                     <h2>عين الان موعد اونلاين</h2>
-                    <p>أختار التاريخ والساعه المتاحه:</p>
-                    <div className="hide-something-visually"></div>
-                    <iframe src="https://app.acuityscheduling.com/schedule.php?owner=29370045" title="Schedule Appointment" width="100%" height="450" frameBorder="0"></iframe>
+                    {/* <Calendar /> */}
+                    <iframe src="https://qbmedia.setmore.com/" title="Schedule Appointment" scrolling="yes" width="100%" height="500" frameborder="0"></iframe>
                     {/* <button className="close-button" onClick={closeCalendarModal}>X</button> */}
                 </div>
             </Modal>
