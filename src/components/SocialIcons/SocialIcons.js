@@ -33,10 +33,10 @@ const SocialIcons = () => {
     const handleClick = (action) => {
         switch (action) {
             case "Call":
-                window.location.href = 'tel:0525511812'
+                window.location.href = 'tel:0529921100'
                 break;
             case "Wsp":
-                window.open('https://wa.link/knryfz')
+                window.open('https://wa.link/i0s73b')
                 break;
             case "IG":
                 window.open('https://instagram.com/qbmedia.co.il')

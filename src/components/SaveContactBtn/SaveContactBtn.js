@@ -15,8 +15,8 @@ const SaveContactBtn = () => {
     const saveContact = () => {
         // Get the contact information from the website
         let contact = {
-            name: "Mohammad QB",
-            phone: "0525511812",
+            name: "QB Media",
+            phone: "0529921100",
             email: "info@qbmedia.co.il",
             website: "https://qbmedia.co.il"
         };
