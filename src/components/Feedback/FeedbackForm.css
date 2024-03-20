@@ -1,0 +1,79 @@
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rating-container p, .thank-you-message p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .star {
+    cursor: pointer;
+    font-size: 25px;
+    color: #ccc; /* Default empty star color */
+  }
+  
+  .star.filled {
+    color: #f5d432; /* Filled star color */;
+  }
+  
+  .star:hover, .star:hover ~ .star.filled {
+    color: #ffc107; /* Hover star color */
+  }
+  
+  .star-radio {
+    display: none;
+  }
+  
+  .feedback-textarea {
+    width: 250px;
+    height: 100px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-button, .copy-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F6D433;
+    color: #2E2E2E;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--font);
+  }
+  
+  .submit-button:hover, .copy-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .google-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+.google-buttons{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* align-items: center; */
+}
