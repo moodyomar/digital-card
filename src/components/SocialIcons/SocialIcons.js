@@ -10,22 +10,21 @@ import review from './review.svg'
 import calendar from './calendar-icon.svg'
 import Modal from 'react-modal';
 import FeedbackForm from '../Feedback/Feedback';
-import { business } from '../../utils/config';
 // import Calendar from '../Calendar/Calendar'
 
 
-const icons = [
-    { "action": "Call", "svg": callIcon, "text": business.socialBtns.call },
-    { "action": "Wsp", "svg": wspIcon, "text": business.socialBtns.wsp },
-    { "action": "IG", "svg": igIcon, "text": business.socialBtns.ig },
-    { "action": "FB", "svg": fbIcon, "text": business.socialBtns.fb },
-    { "action": "Website", "svg": website, "text": business.socialBtns.website },
-    { "action": "Mail", "svg": mail, "text": business.socialBtns.mail },
-    { "action": "reviewus", "svg": review, "text": business.socialBtns.review },
-    { "action": "calendar", "svg": calendar, "text": business.socialBtns.meeting },
-]
+const SocialIcons = ({bizDetails}) => {
+    const icons = [
+        { "action": "Call", "svg": callIcon, "text": bizDetails.socialBtns.call },
+        { "action": "Wsp", "svg": wspIcon, "text": bizDetails.socialBtns.wsp },
+        { "action": "IG", "svg": igIcon, "text": bizDetails.socialBtns.ig },
+        { "action": "FB", "svg": fbIcon, "text": bizDetails.socialBtns.fb },
+        { "action": "Website", "svg": website, "text": bizDetails.socialBtns.website },
+        { "action": "Mail", "svg": mail, "text": bizDetails.socialBtns.mail },
+        { "action": "reviewus", "svg": review, "text": bizDetails.socialBtns.review },
+        { "action": "calendar", "svg": calendar, "text": bizDetails.socialBtns.meeting },
+    ]
 
-const SocialIcons = () => {
     const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
     const openCalendarModal = () => {

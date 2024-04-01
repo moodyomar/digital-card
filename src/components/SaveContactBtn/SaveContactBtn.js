@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import SvcForm from '../SvcForm/ArSvcForm'
 import addIcon from '../../add-icon.svg'
-import { contact } from '../../utils/config';
 
-const SaveContactBtn = () => {
+const SaveContactBtn = ({bizDetails}) => {
     const [isSvcModalOpen, setIsSvcModalOpen] = useState(false);
     const openSvcModal = () => {
         // setIsSvcModalOpen(true);
@@ -38,8 +37,8 @@ const SaveContactBtn = () => {
 
     return (
         <>
-            <div onClick={saveContact} className="btn" >{contact.saveBtnText} <img src={addIcon} alt="Add QB Media Contact" /></div>
-            <div onClick={() => openSvcModal()} className="btn svc-btn" >{contact.orderNowText}</div>
+            <div onClick={saveContact} className="btn" >{bizDetails.saveBtnText} <img src={addIcon} alt="Add QB Media Contact" /></div>
+            <div onClick={() => openSvcModal()} className="btn svc-btn" >{bizDetails.orderNowText}</div>
             <Modal isOpen={isSvcModalOpen} onRequestClose={closeSvcModal} className="modal svc-modal" overlayClassName="overlay">
                 <SvcForm />
             </Modal>

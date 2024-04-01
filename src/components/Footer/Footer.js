@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = ({footer}) => {
 
     return (
 
         <div className='Footer' style={footerStyle}>
-            <small>برمجه وتصميم <a href="https://qbmedia.co.il" target="_blank" rel="noopener noreferrer" style={footerStyle.a}>كيوبي ميديا</a></small>
+            <small>{footer.desclaimer} <a href="https://qbmedia.co.il" target="_blank" rel="noopener noreferrer" style={footerStyle.a}>{footer.copywrites}</a></small>
         </div>
 
     )

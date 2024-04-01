@@ -1,6 +1,6 @@
 export const endpoint = "https://qbmedia.b-cdn.net/qbmedia/"
 
-export const business = {
+export const bizDetails = {
     name: "QB Media | كيوبي ميديا",
     description: "تطوير مصالح تجاريه لعالم الديجيتال",
     socialBtns : {
@@ -12,7 +12,43 @@ export const business = {
         mail: "أميل",
         review: "قييمنا",
         meeting: "عين موعد"
-    }
+    },
+    saveBtnText: "ضيفني لجهات الاتصال",
+    orderNowText: "أطلب خدمه الأن"
+}
+
+export const bizDetails_He = {
+    name: "QB Media | קיובי מדיה",
+    description: "קידום עסקים לעולם האונליין",
+    socialBtns : {
+        call: "שיחה",
+        wsp: "וואטספ",
+        ig: "אינסטגרם",
+        fb: "פייסבוק",
+        website: "האתר",
+        mail: "מייל",
+        review: "דרג אותנו",
+        meeting: "קבע פגישה"
+    },
+    saveBtnText: "הוסף אותנו לאנשי קשר",
+    orderNowText: "הזמן שירות עכשיו"
+}
+
+export const bizDetails_En = {
+    name: "QB Media",
+    description: "Promote your business digitally",
+    socialBtns : {
+        call: "Call Us",
+        wsp: "Txt Us",
+        ig: "Our IG",
+        fb: "Our FB",
+        website: "Website",
+        mail: "Mail",
+        review: "Rate Us",
+        meeting: "Meet Us"
+    },
+    saveBtnText: "Add Us To Contacts",
+    orderNowText: "Order a Service"
 }
 
 export const contact = {
@@ -24,15 +60,7 @@ export const contact = {
     fb:"qbmedia.co",
     menu:"",
     waze: "",
-    saveBtnText: "ضيفني لجهات الاتصال",
-    orderNowText: "أطلب خدمه الأن"
 };
-
-export const socialAccounts = {
-    wsp:`https://api.whatsapp.com/send?phone=${contact.phone}`,
-    ig:`http://instagram.com/${contact.ig}`,
-    fb:`https://facebook.com/${contact.fb}`,
-}
 
 export const schedule = {
     link:"https://.com",
@@ -40,6 +68,12 @@ export const schedule = {
 }
 
 export const footer = {
-    desclaimer: "נבנה ע״י",
-    copywrites: "קיובי מדיה"
+    desclaimer: "برمجه وتصميم",
+    copywrites: "كيوبي ميديا"
+}
+
+export const socialAccounts = {
+    wsp:`https://api.whatsapp.com/send?phone=${contact.phone}`,
+    ig:`http://instagram.com/${contact.ig}`,
+    fb:`https://facebook.com/${contact.fb}`,
 }
