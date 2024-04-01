@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import SvcForm from '../SvcForm/SvcForm'
+import SvcForm from '../SvcForm/ArSvcForm'
 import addIcon from '../../add-icon.svg'
 
 const SaveContactBtn = () => {
     const [isSvcModalOpen, setIsSvcModalOpen] = useState(false);
     const openSvcModal = () => {
-        setIsSvcModalOpen(true);
+        // setIsSvcModalOpen(true);
+        window.open("https://qbmedia.co.il/ar#pricing")
     };
     const closeSvcModal = () => {
         setIsSvcModalOpen(false);

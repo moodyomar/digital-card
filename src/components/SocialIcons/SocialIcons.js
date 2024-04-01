@@ -18,8 +18,8 @@ const icons = [
     { "action": "Wsp", "svg": wspIcon, "text": "واتساب" },
     { "action": "IG", "svg": igIcon, "text": "انستاغرام" },
     { "action": "FB", "svg": fbIcon, "text": "فيسبوك" },
+    { "action": "Website", "svg": website, "text": "الموقع" },
     { "action": "Mail", "svg": mail, "text": "أميل" },
-    { "action": "Website", "svg": website, "text": "موقع" },
     { "action": "reviewus", "svg": review, "text": "قييمنا" },
     { "action": "calendar", "svg": calendar, "text": "موعد" },
 ]
@@ -50,10 +50,10 @@ const SocialIcons = () => {
                 window.open('https://wa.link/i0s73b')
                 break;
             case "IG":
-                window.open('https://instagram.com/qbmedia.co.il')
+                window.open('https://instagram.com/qbmedia.co')
                 break;
             case "FB":
-                window.open('https://facebook.com/qbmedia.co.il')
+                window.open('https://facebook.com/qbmedia.co')
                 break;
             case "Mail":
                 window.location.href = 'mailto:info@qbmedia.co.il'
@@ -89,7 +89,7 @@ const SocialIcons = () => {
                 </div>
             </Modal>
 
-            <Modal isOpen={isReviewModalOpen} onRequestClose={closeReviewModal} className="modal" overlayClassName="overlay">
+            <Modal isOpen={isReviewModalOpen} onRequestClose={closeReviewModal} className="modal feedback" overlayClassName="overlay">
                 <div className="modal-content">
                     <h2>قييمنا بناء على تعاملك معنا</h2>
                     <FeedbackForm/>
