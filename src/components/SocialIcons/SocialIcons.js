@@ -10,18 +10,19 @@ import review from './review.svg'
 import calendar from './calendar-icon.svg'
 import Modal from 'react-modal';
 import FeedbackForm from '../Feedback/Feedback';
+import { business } from '../../utils/config';
 // import Calendar from '../Calendar/Calendar'
 
 
 const icons = [
-    { "action": "Call", "svg": callIcon, "text": "اتصل" },
-    { "action": "Wsp", "svg": wspIcon, "text": "واتساب" },
-    { "action": "IG", "svg": igIcon, "text": "انستاغرام" },
-    { "action": "FB", "svg": fbIcon, "text": "فيسبوك" },
-    { "action": "Website", "svg": website, "text": "الموقع" },
-    { "action": "Mail", "svg": mail, "text": "أميل" },
-    { "action": "reviewus", "svg": review, "text": "قييمنا" },
-    { "action": "calendar", "svg": calendar, "text": "موعد" },
+    { "action": "Call", "svg": callIcon, "text": business.socialBtns.call },
+    { "action": "Wsp", "svg": wspIcon, "text": business.socialBtns.wsp },
+    { "action": "IG", "svg": igIcon, "text": business.socialBtns.ig },
+    { "action": "FB", "svg": fbIcon, "text": business.socialBtns.fb },
+    { "action": "Website", "svg": website, "text": business.socialBtns.website },
+    { "action": "Mail", "svg": mail, "text": business.socialBtns.mail },
+    { "action": "reviewus", "svg": review, "text": business.socialBtns.review },
+    { "action": "calendar", "svg": calendar, "text": business.socialBtns.meeting },
 ]
 
 const SocialIcons = () => {

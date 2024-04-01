@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import SvcForm from '../SvcForm/ArSvcForm'
 import addIcon from '../../add-icon.svg'
+import { contact } from '../../utils/config';
 
 const SaveContactBtn = () => {
     const [isSvcModalOpen, setIsSvcModalOpen] = useState(false);
@@ -19,7 +20,7 @@ const SaveContactBtn = () => {
             name: "QB Media",
             phone: "0529921100",
             email: "info@qbmedia.co.il",
-            website: "https://qbmedia.co.il"
+            website: "https://qbmedia.co.il",
         };
         // create a vcard file
         let vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nURL:" + contact.website + "\nEND:VCARD";
@@ -37,8 +38,8 @@ const SaveContactBtn = () => {
 
     return (
         <>
-            <div onClick={saveContact} className="btn" >ضيفني لجهات الاتصال <img src={addIcon} alt="Add QB Media Contact" /></div>
-            <div onClick={() => openSvcModal()} className="btn svc-btn" >أطلب خدمه الأن</div>
+            <div onClick={saveContact} className="btn" >{contact.saveBtnText} <img src={addIcon} alt="Add QB Media Contact" /></div>
+            <div onClick={() => openSvcModal()} className="btn svc-btn" >{contact.orderNowText}</div>
             <Modal isOpen={isSvcModalOpen} onRequestClose={closeSvcModal} className="modal svc-modal" overlayClassName="overlay">
                 <SvcForm />
             </Modal>

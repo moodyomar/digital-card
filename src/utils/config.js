@@ -1,36 +1,37 @@
 export const endpoint = "https://qbmedia.b-cdn.net/qbmedia/"
 
 export const business = {
-    name: "Rose Cafe | קפה רוז",
-    description: "בית קפה, גלידריה וקינוחים"
+    name: "QB Media | كيوبي ميديا",
+    description: "تطوير مصالح تجاريه لعالم الديجيتال",
+    socialBtns : {
+        call: "اتصل",
+        wsp: "واتساب",
+        ig: "انستاغرام",
+        fb: "فيسبوك",
+        website: "الموقع",
+        mail: "أميل",
+        review: "قييمنا",
+        meeting: "عين موعد"
+    }
 }
 
 export const contact = {
-    name: "Cafe Rose",
-    phone: "046719669",
-    email: "Shimaajandawe31@gmail.com",
-    website: "https://rosecafe.qbmedia.co.il",
-    menu:"http://menu-rosecafe.qbmedia.co.il",
-    waze: "https://waze.com/ul/hsvc41wdby",
-    saveBtnText: "הוסף לאנשי קשר",
-    orderNowText: "הזמן השירות עכשיו"
+    name: "QB Media",
+    phone: "0529921100",
+    email: "info@qbmedia.co.il",
+    website: "https://qbmedia.co.il",
+    ig:"qbmedia.co",
+    fb:"qbmedia.co",
+    menu:"",
+    waze: "",
+    saveBtnText: "ضيفني لجهات الاتصال",
+    orderNowText: "أطلب خدمه الأن"
 };
 
 export const socialAccounts = {
-    wsp:"https://api.whatsapp.com/send?phone=972525040074",
-    ig:"http://instagram.com/rose.cafe6",
-    fb:"https://facebook.com/Rose.cafe6",
-}
-
-export const socialBtns = {
-    menu: "תפריט",
-    callIcon: "חייג",
-    wspIcon: "ואטסאפ",
-    igIcon: "אינסטה",
-    fbIcon: "פייסבוק",
-    mail: "אימייל",
-    review: "דרגו אותנו",
-    waze: "בואו אלינו"
+    wsp:`https://api.whatsapp.com/send?phone=${contact.phone}`,
+    ig:`http://instagram.com/${contact.ig}`,
+    fb:`https://facebook.com/${contact.fb}`,
 }
 
 export const schedule = {
