@@ -2,12 +2,21 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import SvcForm from '../SvcForm/ArSvcForm'
 import addIcon from '../../add-icon.svg'
+import { ServiceModal } from '../ServiceModal/ServiceModal';
 
-const SaveContactBtn = ({bizDetails}) => {
+const SaveContactBtn = ({ bizDetails }) => {
+        const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
+        const openCalendarModal = () => {
+            setIsCalendarModalOpen(true);
+        };
+        const closeCalendarModal = () => {
+            setIsCalendarModalOpen(false);
+        };
+
     const [isSvcModalOpen, setIsSvcModalOpen] = useState(false);
     const openSvcModal = () => {
         // setIsSvcModalOpen(true);
-        window.open("https://qbmedia.co.il/ar#pricing")
+        openCalendarModal()
     };
     const closeSvcModal = () => {
         setIsSvcModalOpen(false);
@@ -39,6 +48,7 @@ const SaveContactBtn = ({bizDetails}) => {
         <>
             <div onClick={saveContact} className="btn" >{bizDetails.saveBtnText} <img src={addIcon} alt="Add QB Media Contact" /></div>
             <div onClick={() => openSvcModal()} className="btn svc-btn" >{bizDetails.orderNowText}</div>
+            <ServiceModal closeCalendarModal={closeCalendarModal} isCalendarModalOpen={isCalendarModalOpen}/>
             <Modal isOpen={isSvcModalOpen} onRequestClose={closeSvcModal} className="modal svc-modal" overlayClassName="overlay">
                 <SvcForm />
             </Modal>

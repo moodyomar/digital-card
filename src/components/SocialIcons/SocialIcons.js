@@ -10,6 +10,7 @@ import review from './review.svg'
 import calendar from './calendar-icon.svg'
 import Modal from 'react-modal';
 import FeedbackForm from '../Feedback/Feedback';
+import { ServiceModal } from '../ServiceModal/ServiceModal';
 // import Calendar from '../Calendar/Calendar'
 
 
@@ -25,8 +26,8 @@ const SocialIcons = ({bizDetails}) => {
         { "action": "reviewus", "svg": review, "text": bizDetails.socialBtns.review },
     ]
 
-    const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+    const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
     const openCalendarModal = () => {
         setIsCalendarModalOpen(true);
     };
@@ -80,14 +81,7 @@ const SocialIcons = ({bizDetails}) => {
                     <span>{icon.text}</span>
                 </div>
             ))}
-            <Modal isOpen={isCalendarModalOpen} onRequestClose={closeCalendarModal} className="modal" overlayClassName="overlay">
-                <div className="modal-content">
-                    {/* <h2>تعيين موعد اونلاين</h2> */}
-                    {/* <Calendar /> */}
-                    <iframe src="https://qbmedia.setmore.com/" title="Schedule Appointment" scrolling="yes" width="100%" height="750" frameborder="0"></iframe>
-                    {/* <button className="close-button" onClick={closeCalendarModal}>X</button> */}
-                </div>
-            </Modal>
+            <ServiceModal closeCalendarModal={closeCalendarModal} isCalendarModalOpen={isCalendarModalOpen}/>
 
             <Modal isOpen={isReviewModalOpen} onRequestClose={closeReviewModal} className="modal feedback" overlayClassName="overlay">
                 <div className="modal-content">
