@@ -19,10 +19,10 @@ const SocialIcons = ({bizDetails}) => {
         { "action": "Wsp", "svg": wspIcon, "text": bizDetails.socialBtns.wsp },
         { "action": "IG", "svg": igIcon, "text": bizDetails.socialBtns.ig },
         { "action": "FB", "svg": fbIcon, "text": bizDetails.socialBtns.fb },
+        { "action": "calendar", "svg": calendar, "text": bizDetails.socialBtns.meeting },
         { "action": "Website", "svg": website, "text": bizDetails.socialBtns.website },
         { "action": "Mail", "svg": mail, "text": bizDetails.socialBtns.mail },
         { "action": "reviewus", "svg": review, "text": bizDetails.socialBtns.review },
-        { "action": "calendar", "svg": calendar, "text": bizDetails.socialBtns.meeting },
     ]
 
     const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
@@ -82,9 +82,9 @@ const SocialIcons = ({bizDetails}) => {
             ))}
             <Modal isOpen={isCalendarModalOpen} onRequestClose={closeCalendarModal} className="modal" overlayClassName="overlay">
                 <div className="modal-content">
-                    <h2>تعيين موعد اونلاين</h2>
+                    {/* <h2>تعيين موعد اونلاين</h2> */}
                     {/* <Calendar /> */}
-                    <iframe src="https://qbmedia.setmore.com/" title="Schedule Appointment" scrolling="yes" width="100%" height="500" frameborder="0"></iframe>
+                    <iframe src="https://qbmedia.setmore.com/" title="Schedule Appointment" scrolling="yes" width="100%" height="750" frameborder="0"></iframe>
                     {/* <button className="close-button" onClick={closeCalendarModal}>X</button> */}
                 </div>
             </Modal>

@@ -9,7 +9,7 @@ export const bizDetails = {
         ig: "انستاغرام",
         fb: "فيسبوك",
         website: "الموقع",
-        mail: "أميل",
+        mail: "ايميل",
         review: "قييمنا",
         meeting: "عين موعد"
     },
