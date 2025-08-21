@@ -2,7 +2,6 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    /* height: 300px; */
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
@@ -22,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 200;
   }
   
   .modal-content {
@@ -32,6 +32,7 @@
     align-items: center;
     direction: rtl;
     font-family: var(--font);
+    z-index: 300;
   }
   
   .close-button {

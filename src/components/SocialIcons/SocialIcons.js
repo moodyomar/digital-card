@@ -10,11 +10,10 @@ import review from './review.svg'
 import calendar from './calendar-icon.svg'
 import Modal from 'react-modal';
 import FeedbackForm from '../Feedback/Feedback';
-import { ServiceModal } from '../ServiceModal/ServiceModal';
 // import Calendar from '../Calendar/Calendar'
 
 
-const SocialIcons = ({bizDetails}) => {
+const SocialIcons = ({bizDetails, onCalendarClick}) => {
     const icons = [
         { "action": "Call", "svg": callIcon, "text": bizDetails.socialBtns.call },
         { "action": "Wsp", "svg": wspIcon, "text": bizDetails.socialBtns.wsp },
@@ -27,14 +26,6 @@ const SocialIcons = ({bizDetails}) => {
     ]
 
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-    const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
-    const openCalendarModal = () => {
-        setIsCalendarModalOpen(true);
-    };
-    const closeCalendarModal = () => {
-        setIsCalendarModalOpen(false);
-    };
-
     const openReviewModal = () => {
         setIsReviewModalOpen(true);
     };
@@ -66,7 +57,7 @@ const SocialIcons = ({bizDetails}) => {
                 openReviewModal();
                 break;
             case "calendar":
-                openCalendarModal();
+                onCalendarClick();
                 break;
             default:
                 console.log("Invalid action");
@@ -81,7 +72,6 @@ const SocialIcons = ({bizDetails}) => {
                     <span>{icon.text}</span>
                 </div>
             ))}
-            <ServiceModal closeCalendarModal={closeCalendarModal} isCalendarModalOpen={isCalendarModalOpen}/>
 
             <Modal isOpen={isReviewModalOpen} onRequestClose={closeReviewModal} className="modal feedback" overlayClassName="overlay">
                 <div className="modal-content">

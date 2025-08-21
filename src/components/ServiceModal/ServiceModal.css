@@ -1,31 +1,4 @@
-.SocialIcons{
-    margin-top: 28px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 34px;
-    width: 100vw;
-    direction: rtl;
-    width: 80vw;
-}
-.socialIcon{
-    cursor: pointer;
-    transition: .25s all ease-out;
-display: flex;
-flex-direction: column;
-}
-.socialIcon:hover{
-    transition: .3s all ease-in;
-    transform: scale(1.1);
-}
-span{
-    margin-top: 10px;
-    font-size: 13px;
-}
-.heading-actions{
-    display: none !important;
-}
-
+/* ServiceModal.css */
 .modal {
     position: fixed;
     top: 50%;
@@ -41,15 +14,10 @@ span{
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 0;
-  }
-  .modal.feedback{
-    height: 380px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .overlay {
+    z-index: 9999; /* High z-index to appear above all elements */
+}
+
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -59,9 +27,10 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-content {
+    z-index: 9998; /* High z-index for overlay */
+}
+
+.modal-content {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -69,5 +38,12 @@ span{
     align-items: center;
     direction: rtl;
     font-family: var(--font);
-  }
-  
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}

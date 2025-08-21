@@ -5,7 +5,12 @@ import SocialIcons from './components/SocialIcons/SocialIcons';
 import SaveContactBtn from './components/SaveContactBtn/SaveContactBtn';
 import Footer from './components/Footer/Footer';
 import LanguageSelector from './components/LanguageSelector/LanguageSelector';
+import { ServiceModal } from './components/ServiceModal/ServiceModal';
+import Modal from 'react-modal';
 import { bizDetails, bizDetails_En, bizDetails_He, footer } from './utils/config';
+
+// Set the app element for react-modal
+Modal.setAppElement('#root');
 
 function isHebrew() {
   return /he/i.test(navigator.language);
@@ -36,6 +41,16 @@ function App() {
     return bizDetails; // Default to Arabic
   });
 
+  const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
+
+  const openCalendarModal = () => {
+    setIsCalendarModalOpen(true);
+  };
+
+  const closeCalendarModal = () => {
+    setIsCalendarModalOpen(false);
+  };
+
   const handleLanguageChange = (language) => {
     let newBusinessInfo;
     if (language === 'he') {
@@ -54,9 +69,10 @@ function App() {
     <div className="App">
       <LanguageSelector onLanguageChange={handleLanguageChange} />
       <Hero bizDetails={businessInfo} />
-      <SocialIcons bizDetails={businessInfo} />
+      <SocialIcons bizDetails={businessInfo} onCalendarClick={openCalendarModal} />
       <SaveContactBtn bizDetails={businessInfo} />
       <Footer footer={footer} />
+      <ServiceModal closeCalendarModal={closeCalendarModal} isCalendarModalOpen={isCalendarModalOpen} />
     </div>
   );
 }

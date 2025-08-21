@@ -28,7 +28,7 @@ export const bizDetails_He = {
         website: "האתר",
         mail: "מייל",
         review: "דרג אותנו",
-        meeting: "פגישה"
+        meeting: "קבע תור"
     },
     saveBtnText: "הוסף אותנו לאנשי קשר",
     orderNowText: "הזמן שירות עכשיו"
